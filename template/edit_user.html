@@ -1,0 +1,52 @@
+
+<!-- <form action="/update_user/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="hidden" name="id" value="{{student_det.id}}">
+    <input type="text" name="student_name" value="{{student_det.student_name}}" placeholder="student_name"><br><br>
+    <input type="number" name="student_mobile" value="{{student_det.student_mobile}}" placeholder="student_mobile"><br><br>
+    <input type="text" name="student_email" value="{{student_det.student_email}}" placeholder="student_email"><br><br>
+    <input type="text" name="student_class" value="{{student_det.student_class}}" placeholder="student_class"><br><br>
+    <input type="text" name="student_address" value="{{student_det.student_address}}" placeholder="student_address"><br><br>
+    <input type="text" name="student_password" value="{{student_det.student_password}}" placeholder="student_password"><br><br>
+    <button>Update Data</button>
+
+</form>
+ {{student_det.student_name}} 
+{{student_det.student_mobile}} -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="C:\Users\user\Desktop\A to Z\bootstrap\css\bootstrap.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\user\Desktop\A to Z\bootstrap\css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\user\Desktop\A to Z\bootstrap\css\bootstrap-grid.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\user\Desktop\A to Z\bootstrap\css\bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\user\Desktop\A to Z\bootstrap\css\bootstrap-reboot.css">
+<link rel="stylesheet" type="text/css" href="C:\Users\user\Desktop\A to Z\bootstrap\css\bootstrap-reboot.min.css">
+<!--js-->
+<script type="text/javascript" src="C:\Users\user\Desktop\A to Z\bootstrap\js\bootstrap.bundle.js"></script>
+<script type="text/javascript" src="C:\Users\user\Desktop\A to Z\bootstrap\js\bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="C:\Users\user\Desktop\A to Z\bootstrap\js\bootstrap.js"></script>
+<script type="text/javascript" src="C:\Users\user\Desktop\A to Z\bootstrap\js\bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="row">
+			<div class=" col-12">
+				<h1 style="text-align: center; background-color: cornflowerblue; color: white;"> Edit Information</h1>
+				<form action="/update_user/" method="post" enctype="multipart/form-data" style="background-color: antiquewhite;">
+				    {% csrf_token %}
+				    <center>
+                        <input type="hidden" name="id" value="{{user_det.id}}">
+                        <input type="text" name="user_name" value="{{user_det.user_name}}" placeholder="user_name" style="width: 80%; height: 25px; margin-top: 20px;"><br><br>
+                        <input type="number" name="user_mobile" value="{{user_det.user_mobile}}" placeholder="user_mobile" style="width: 80%; height: 25px; "><br><br>
+                        <input type="text" name="user_email" value="{{user_det.user_email}}" placeholder="user_email" style="width: 80%; height: 25px; "><br><br>
+                        <input type="text" name="user_password" value="{{user_det.user_password}}" placeholder="user_password" style="width: 80%; height: 25px; "><br><br>
+                        <button style="height: 50px; width: 10%; background-color:red; margin-bottom: 10px; color: white;">Update Data</button>
+				    </center>
+				</form>
+			</div>
+		</div>
+	</div>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bid Mafia</title>
+        {% load static%}
+        <link rel="stylesheet" href="../static/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Rubik&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
+    </head>
+    <body>
+        <div class="khali">
+           
+            <div class="wrapper">
+                <div class="ffuk">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/admin_log_out">Logout</a></li>
+                        <!-- <li><a href="#">Le maro</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        <form action="/save_product/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <center>
+            <table border="0">
+                <marquee behavior="alternate" ><h3>Bid Now And Grab More!!!</h3></marquee>  
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td class="right">Item name : </td>
+                    <td><input type="text" class="field" name="title" placeholder="Enter item name" required></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    
+                    <td>Optional Image1 </td>
+                    <td><input class="form-control" type="file" id="formFile" 
+                        name="image1"></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+
+                
+                <tr>
+                    <td> Discription : </td>
+                    <td><textarea type="text" class="field"  name="description" placeholder="Enter Short Description" size="53" required></textarea></td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+        
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Set base price :
+                    </td>
+                    <td>
+                        <input type="text" class="field" name="initial_price" placeholder="Enter price in numbers" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Set Current price :
+                    </td>
+                    <td>
+                        <input type="text" class="field" name="current_price" placeholder="Enter price in numbers" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Auction Start date :
+                    </td>
+                    <td>
+                        <input type="date" name="start_date" class="field" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Auction End date :
+                    </td>
+                    <td>
+                        <input type="date" name="end_date" class="field" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Auction created:
+                    </td>
+                    <td>
+                        <input type="date" name="created_at" class="field" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+					<td colspan="2" align="center" ><font color="white"><input type="submit" class="btt third" value="Upload"></td>
+                </tr>
+                <tr>
+                    <td height="60px"></td>
+                    <td height="60px"></td>
+                </tr>
+            
+    
+            </table>
+        </form>
+        
+        </center>
+    </div>
+    </body>

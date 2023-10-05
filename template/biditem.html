@@ -1,0 +1,63 @@
+<div class="container">
+    <center>
+            <table border="0">
+                <tr>
+                    <td height="20px"></td>
+                    <td height="20px"></td>
+                </tr>
+                <tr>
+                    
+                    <td>Title : </td>
+                    <td><b>{{product.title}}</b></td>
+                </tr>
+                
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+        
+                <tr>
+                    
+                    <td width="30%"> Description : </td>
+                    <td width="60%">{{product.description}}</td>
+                </tr>
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                    <td>Base Price :</td>
+                    <td>{{product.initial_price}}₹</td>
+                </tr>
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                    <td>Current Price :</td>
+                    <td>{{product.current_price}}₹</td>
+                </tr>
+                <tr>
+                    <td height="10px"><hr></td>
+                    <td height="10px"><hr></td>
+                </tr>
+                <tr>
+                    <td>image :</td>
+                    <td><img src=/{{product.image1}} height="300" width="400"></td>
+                </tr>
+                <tr>
+                    <td height="10px"></td>
+                    <td height="10px"></td>
+                </tr>
+                <tr>
+                <form action="/validate/" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <td>Entre Amount for Bid :<input type="hidden" name="id"  value={{product.id}}> <input type="hidden" name="uname"  value={{user_data.uname}}></td></td>
+                    <td><input type="number" name="user_amount" class="field" placeholder="Enter your amount" min={{product.current_price}}></td>
+                </tr> <tr><td></td><td>
+                    <input type="submit" class="btt third" value="Bid now">
+                    </form></td></tr>
+            </table>
+        </center>
+        </form>
+    </div>

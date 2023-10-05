@@ -1,0 +1,77 @@
+
+
+
+<!-- <h1>Welcome Admin</h1>
+
+{% for data in user_data %}
+{{data.user_name}}
+{% endfor %}
+<br><br> -->
+<a href="/admin_log_out"><button style="background-color: rgb(11, 8, 32); color: white;">Log Out Admin</button></a>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1 style="text-align: center;">Welcome Admin</h1>
+   <div class="container mt-5">
+		<div class="row">
+			<div class=" col-12 " style="background-color: aliceblue;">
+				<h1 style="text-align: center; background-color: cornflowerblue; color: white;"> user List</h1>
+				<table width="100%" border="1">
+				    <tr>
+				        <th width="1%"></th>
+				        <th width="1%"></th>
+				        <th>NAME</th>
+				        <th>MOBILE</th>
+				        <th>EMAIL</th>
+				        <th>PASSWORD</th>
+				    </tr>
+            {% for data in user_data %}
+				    <tr>
+				        <td><a href="/edit_user?id={{data.id}}"><button style="background-color: darkcyan; color: white;">Edit</button></a></td>
+				        <td><a href="/delete_user?id={{data.id}}"><button style="background-color: red; color: white;">Delete</button></a></td>
+				        <td>{{data.user_name}}</td>
+				        <td>{{data.user_mobile}}</td>
+				        <td>{{data.user_email}}</td>
+				        <td>{{data.user_password}}</td>
+				    </tr>
+				    {% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>  
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1 style="text-align: center; text-decoration:double underline;">Welcome Admin</h1>
+<nav class="navbar navbar-light bg-light">
+	<a class="navbar-brand" href="#">Home</a>
+  </nav>
+  <nav class="navbar navbar-light bg-light">
+	<a href="/auction" >Create Auction</a>
+  </nav>
+  <nav class="navbar navbar-light bg-light">
+	<a href="/user_list" >user list</a>
+  </nav>
+  <!-- As a heading -->
+  <nav class="navbar navbar-light bg-light">
+	<a href="/admin_log_out" >Log out</a>
+  </nav>
+</body>
+</html>
